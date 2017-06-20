@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Bb1</title>
+  <base href="https://james028.github.io/bb1/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+<link href="styles.d41d8cd98f00b204e980.bundle.css" rel="stylesheet"/></head>
+<body>
+  <app-root></app-root>
+
+  <script>
+    (function(){
+      var redirect = sessionStorage.redirect;
+      delete sessionStorage.redirect;
+      if (redirect && redirect != location.href) {
+        history.replaceState(null, null, redirect);
+        // REMOVE THIS - just showing the redirect route in the UI
+        document.body.setAttribute('message', 'This page was redirected by 404.html, from the route: ' + redirect);
+      }
+      else {
+        // REMOVE THIS - just showing the redirect route in the UI
+        document.body.setAttribute('message', 'This page was loaded directly from the index.html file');
+      }
+    })();
+  </script>
+<script type="text/javascript" src="inline.7b44b730fd7e9355ec90.bundle.js"></script><script type="text/javascript" src="polyfills.07685bca73161be59257.bundle.js"></script><script type="text/javascript" src="vendor.4e0fa2a6295e1efa44f2.bundle.js"></script><script type="text/javascript" src="main.b9bca8178469c64fd9f6.bundle.js"></script></body>
+</html>
